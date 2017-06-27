@@ -27,3 +27,11 @@ def sms_send(request):
             'form': MessageForm(),
         }
     return render(request, 'message/send.html', context=context)
+
+
+def sms_list(request):
+    messages = Message.objects.order_by('-send_time')
+    context = {
+        'messages': messages
+    }
+    return render(request, 'message/list.html', context=context)

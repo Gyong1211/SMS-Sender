@@ -1,0 +1,15 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+<div class="containter">
+    {% for message in messages %}
+    <div class="content">
+        <p>Sender : {{message.sender}}</p>
+        <p>Recipients : {{message.recipient}}</p>
+        <p>Message : {{message.content}}</p>
+        <p>Send Time : {{message.send_time}}</p>
+    </div>
+    <hr>
+    {% endfor %}
+</div>
+{% endblock %}

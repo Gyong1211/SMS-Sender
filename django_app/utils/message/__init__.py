@@ -29,7 +29,6 @@ def send_message(number, text):
             result.append("Error List : {}".format(response['error_list']))
         return result
     except CoolsmsException as e:
-        error_code = e.code
-        error_message = e.msg
-        result = ["Error Code : {}".format(error_code), "Error Message : {}".format(error_message)]
+        print(type(e.msg))
+        result = ["Error Code : {}".format(e.code)]
         return result
