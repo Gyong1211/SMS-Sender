@@ -3,6 +3,7 @@
 ### Custom ###
 *.swp
 *.idea
+secret_key/
 
 ### Django ###
 *.log

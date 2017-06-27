@@ -10,6 +10,12 @@
         {% endfor %}
         <button type="submit">전송</button>
     </form>
+    {% if results %}
+    <div>
+        {% for result in results %}
+        <p>{{ result }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
 </div>
-
 {% endblock %}
